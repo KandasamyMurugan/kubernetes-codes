@@ -1,0 +1,17 @@
+# Section 1 - API Version
+apiVersion: v1
+# Section 2 - Which type of Object we want to create
+kind: Pod
+# Section 3 - Meta data of the object we are creating
+metadata:
+  name: pod-nginx
+  labels:
+    app: nginx_app
+# Section 4 - The actual options we need for the object we want to create
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:latest
+    resources:
+      limits:
+        memory: 50M
