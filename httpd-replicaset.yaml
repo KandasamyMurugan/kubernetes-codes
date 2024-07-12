@@ -6,11 +6,12 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: httpd-app
+      app: httpd_app
   template:
     metadata:
       labels:
-        app: httpd-app
+        app: httpd_app
+        type: front-end
     spec:
       containers:
       - name: httpd-container
@@ -19,4 +20,4 @@ spec:
           limits:
             cpu: 200m
             memory: "105Mi"
-~                              
+~                               
